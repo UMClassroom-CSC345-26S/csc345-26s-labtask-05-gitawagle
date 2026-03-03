@@ -5,6 +5,25 @@ checking for logical consequence in propositional logic. The second is at the hi
 displaying ontological knowledge in a knowledge graph.
 
 1. Logical Consequence in Propositional Logic
+   - Use a truth table to decide whether or not `p | q` is a logical consequence of the axioms
+     ```
+     p | q | r
+     r => (p | q)
+     (q & r) => p
+     ~p | q | r
+     ```
+     Put the truth table (I suggest using a spreadsheet to do it neatly) in a PDF file called
+     `LC1.pdf`.
+   - Use a truth table to decide whether or not `q & (r => p)` is a logical consequence of the
+     axioms
+     ```
+     p => (q | r)
+     p | q | r
+     ~q => (p | ~r)
+     (q & r) => p
+     ```
+     Put the truth table (I suggest using a spreadsheet to do it neatly) in a PDF file called
+    `LC2.pdf`.
 
 2. Ontological Knowledge Graph  
    On 20th January 2026 the Miami Hurricanes lost the College Football Playoff National 
