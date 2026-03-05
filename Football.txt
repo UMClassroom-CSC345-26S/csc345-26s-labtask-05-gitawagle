@@ -1,0 +1,72 @@
+================================================================
+ONTOLOGICAL KNOWLEDGE GRAPH — CFPNC 2026
+Thing — Relationship — Thing Triples
+================================================================
+
+----------------------------------------------------------------
+SECTION 1: DOMAIN FACTS
+----------------------------------------------------------------
+Miami_Hurricanes      lost            CFPNC_2026
+Indiana_Hoosiers      won             CFPNC_2026
+20_January_2026       is_date         CFPNC_2026
+27                    winning_score   CFPNC_2026
+21                    losing_score    CFPNC_2026
+Carson_Beck           played_in       CFPNC_2026
+Carson_Beck           member          Miami_Hurricanes
+Carson_Beck           instance        Man
+
+----------------------------------------------------------------
+SECTION 2: INSTANCE-OF LINKS (domain node → SUMO class)
+----------------------------------------------------------------
+CFPNC_2026            instance        FootballUS
+Miami_Hurricanes      instance        SportsTeam
+Indiana_Hoosiers      instance        SportsTeam
+20_January_2026       instance        Day
+27                    instance        NonnegativeInteger
+21                    instance        NonnegativeInteger
+Carson_Beck           instance        Man
+
+----------------------------------------------------------------
+SECTION 3: SUMO SUBCLASS HIERARCHIES (all end at Entity)
+----------------------------------------------------------------
+
+--- CFPNC_2026 via FootballUS → Physical → Entity ---
+FootballUS            subclass        TeamSport
+TeamSport             subclass        Sport
+Sport                 subclass        RecreationOrExercise
+RecreationOrExercise  subclass        Process
+Process               subclass        Physical
+Physical              subclass        Entity
+
+--- Miami_Hurricanes / Indiana_Hoosiers via SportsTeam → Physical → Entity ---
+SportsTeam            subclass        GroupOfPeople
+GroupOfPeople         subclass        Group
+Group                 subclass        Collection
+Collection            subclass        Physical
+Physical              subclass        Entity
+
+--- Carson_Beck via Man → Physical → Entity ---
+Man                   subclass        Human
+Human                 subclass        Animal
+Animal                subclass        OrganicObject
+OrganicObject         subclass        Object
+Object                subclass        Physical
+Physical              subclass        Entity
+
+--- 20_January_2026 via Day → Abstract → Entity ---
+Day                   subclass        TimeInterval
+TimeInterval          subclass        TimeMeasure
+TimeMeasure           subclass        Abstract
+Abstract              subclass        Entity
+
+--- 27 / 21 via NonnegativeInteger → Abstract → Entity ---
+NonnegativeInteger    subclass        Integer
+Integer               subclass        RationalNumber
+RationalNumber        subclass        RealNumber
+RealNumber            subclass        Number
+Number                subclass        Abstract
+Abstract              subclass        Entity
+
+================================================================
+END OF FILE
+================================================================
